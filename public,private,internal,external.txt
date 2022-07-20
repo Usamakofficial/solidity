@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+        // Visibility
+    contract Parent{
+        function f1() public pure returns(uint){
+            f3();
+            return 1;
+        }
+        function f2() private pure returns(uint){
+            return 2;
+        }
+        function f3() internal pure returns(uint){
+            return 3;
+        }
+        function f4() external pure returns(uint){
+            return 4;
+        }
+    }
+    contract Child is Parent{    //Derived Contract
+    }
+    contract demo{
+        Parent parent = new Parent();
+        uint public y = parent.f4();
+    }
