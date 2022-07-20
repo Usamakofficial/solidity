@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+
+ pragma solidity 0.8.15;
+
+    contract property {
+        int public price;
+        string public location = "London";
+
+     constructor (int _price , string memory _location){
+        price = _price;
+        location = _loctation;
+    }
+    function setprice(int _price) public {
+        price = -price;
+    }
+
+    function setlocation(string memory _loctation) public {
+        location = _loctation;
+    }
