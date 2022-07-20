@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.15;
+
+        // Storage and Memory
+contract Storage{
+    string[] public programs = ['java', 'python', 'kotlin'];
+
+    function mem() public view {
+        string[] memory P1 = programs;
+        P1[0] = 'JavaScript';
+    }
+    function sto() public {
+        string[] storage P1 = programs;
+        P1[0] = 'JavaScript';
+    }
+}
