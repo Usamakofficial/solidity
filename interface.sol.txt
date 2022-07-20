@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.15;
+
+        // Interface
+    interface parent{
+        // state variable cannot be used in interface concept
+         
+        function setElement(string memory _name) external;
+    } 
+    contract child is parent {
+        function setElement(string memory _name) public override{
+        }
+    }
