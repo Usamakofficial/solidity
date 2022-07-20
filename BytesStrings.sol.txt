@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.15;
+
+contract BS{
+    // Bytes Strings
+    
+    bytes public b1 = 'abc';
+    string public s1 = 'abc';
+
+    function addElement() public {
+        b1.push('d');
+        // s1.push('d');
+    }
+}
