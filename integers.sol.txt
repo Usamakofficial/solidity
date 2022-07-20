@@ -1,0 +1,13 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.15;
+
+    // Integers
+
+    contract integers{
+        // int either be positive or negative
+        int8 public x= -126;
+        
+        // uint always be positive
+        uint public y = 1210;
+    }
