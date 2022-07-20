@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.15;
+
+        // Require Function
+    contract demo{
+        address public owner;
+
+        constructor (){
+            owner = msg.sender;
+        }
+        function get() public view returns(uint){
+            require(owner==msg.sender, "You are not the owner");
+            return 10;
+        }
+    }
