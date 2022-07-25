@@ -1,0 +1,32 @@
+// SPDX-License-Identifier:MIT
+
+pragma solidity 0.8.15; 
+
+    // Data Types
+
+contract demo{
+    int public myInt;
+    string public myString;
+    mapping(int=>string) public myMapping;
+    address public myAddress;
+    bool public myBool;
+    struct Profile{
+        string name;
+        int number;
+    }
+    int[] public myArr;
+
+    Profile public myProfile;
+
+    function setValue(int _myInt, string memory _myString, address _myAddress, bool _myBool) public {
+        myInt = _myInt;
+        myString = _myString;
+        myMapping[_myInt] = _myString;
+        myAddress = _myAddress;
+        myBool = _myBool;
+
+        myProfile = Profile(_myString,_myInt);
+
+        myArr.push(_myInt);
+    }
+}
