@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.15;
+
+    // Receive
+    // Receive can only receive ethers
+contract demo{
+    
+    event log(string _fun,address _sender, uint _val, bytes _data);
+
+    receive() external payable{
+        emit log("receive", msg.sender, msg.value, "");
+    }
+}
